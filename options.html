@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Test Extension Options</title>
+  </head>
+  <body>
+    Editor:
+    <select id="editor">
+      <option value="vscode">vscode</option>
+      <option value="vscode-insiders">vscode-insiders</option>
+    </select>
+    <br />
+    <br />
+    <label for="localFolder">
+      Absolute path for you local github repos folder (assumes default folder
+      names)
+    </label>
+    <br />
+    <br />
+    <input type="text" id="localFolder" style="min-width:400px;" />
+
+    <div id="status"></div>
+    <br />
+    <br />
+    <button id="save">Save</button>
+
+    <script src="options.js"></script>
+  </body>
+</html>
