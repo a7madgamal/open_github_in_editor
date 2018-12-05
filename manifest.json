@@ -1,6 +1,6 @@
 {
   "name": "Open Github in editor",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "opens github PR diff lines and files locally in your editor. Preview version!! make sure to set the options first",
   "manifest_version": 2,
   "permissions": ["storage"],
@@ -11,5 +11,12 @@
       "run_at": "document_idle",
       "js": ["contentScript.js"]
     }
-  ]
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "icons": {
+    "128": "icons/128.png"
+  }
 }

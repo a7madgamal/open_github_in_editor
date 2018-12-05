@@ -1,4 +1,3 @@
-console.log("run")
 ;(() => {
   const settingsLoaded = (editor, localFolder) => {
     let repoName = location.pathname.split("/")[2]

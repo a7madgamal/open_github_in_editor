@@ -4,6 +4,7 @@
     <title>Options</title>
   </head>
   <body>
+    <h2>Open Github editor settings</h2>
     Editor:
     <select id="editor">
       <option value="vscode">vscode</option>
@@ -12,12 +13,17 @@
     <br />
     <br />
     <label for="localFolder">
-      Absolute path for you local github repos folder (assumes default folder
-      names)
+      Absolute path for the local repos folder (folder name should match repo
+      name!)
     </label>
     <br />
     <br />
-    <input type="text" id="localFolder" style="min-width:400px;" />
+    <input
+      type="text"
+      id="localFolder"
+      style="min-width:400px;"
+      placeholder="/absolute/path/of/your/repos/parent/folder/"
+    />
 
     <div id="status"></div>
     <br />
