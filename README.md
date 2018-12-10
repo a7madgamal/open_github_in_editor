@@ -11,6 +11,10 @@ https://chrome.google.com/webstore/detail/open-github-in-editor/epklehdbjbicoeee
 - Supports vscode, vscode-isiders and textmate.
 - More editors soon, maybe also support for gitlab who knows!!
 
+## want support for sublime text?
+
+follow this blocking issue https://github.com/SublimeTextIssues/Core/issues/2514
+
 # Changelog
 
 ## v0.0.1
