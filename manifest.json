@@ -1,7 +1,7 @@
 {
   "name": "Open Github in editor",
-  "version": "0.0.3",
-  "description": "opens github PR diff lines and files locally in your editor. Preview version!! make sure to set the options first",
+  "version": "0.1.0",
+  "description": "opens github PR diff lines and files locally in your editor. Supports vscode, vscode-insiders and textmate. more to come!",
   "manifest_version": 2,
   "permissions": ["storage"],
   "options_page": "options.html",
