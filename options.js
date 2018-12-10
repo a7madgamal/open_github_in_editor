@@ -19,16 +19,10 @@ const saveOptions = () => {
 }
 
 const restoreOptions = () => {
-  chrome.storage.sync.get(
-    {
-      editor: "vscode",
-      localFolder: ""
-    },
-    items => {
-      document.getElementById("editor").value = items.editor
-      document.getElementById("localFolder").value = items.localFolder
-    }
-  )
+  chrome.storage.sync.get(["editor", "localFolder"], items => {
+    document.getElementById("editor").value = items.editor || "vscode"
+    document.getElementById("localFolder").value = items.localFolder || ""
+  })
 }
 
 document.addEventListener("DOMContentLoaded", restoreOptions)
