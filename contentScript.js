@@ -9,11 +9,26 @@
       fileRelativePath,
       lineNumber
     ) => {
-      const linePath = `${editor}://file${localFolder}${folderName}/${fileRelativePath}${
-        lineNumber ? `:${lineNumber}` : ""
-      }`
+      const fullPath = `${localFolder}${folderName}/${fileRelativePath}`
+      let url
 
-      window.open(linePath, "_self")
+      switch (editor) {
+        case "vscode":
+        case "vscode-insiders":
+          url = `${editor}://file${fullPath}${
+            lineNumber ? `:${lineNumber}` : ""
+          }`
+          break
+
+        case "txmt":
+          url = `${editor}://open/?url=file://${fullPath}${
+            lineNumber ? `&line=${lineNumber}` : ""
+          }`
+        default:
+          break
+      }
+
+      window.open(url, "_self")
     }
 
     const handleLineClick = target => {

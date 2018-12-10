@@ -1,12 +1,16 @@
 # Open Github in editor
 
+## v0.1.0
+
 A chrome extension for opening a github diff line in your editor 💻
 
 ![](record.gif)
 
 https://chrome.google.com/webstore/detail/open-github-in-editor/epklehdbjbicoeeebecaeeeceflgpmga/
 
-- currently supports vscode and vscode-isiders only, but the plan it to support ALOT more
+- Supports vscode, vscode-isiders and textmate.
+- More editors soon, maybe also support for gitlab who knows!!
+
 # Changelog
 
 ## v0.0.1
