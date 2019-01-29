@@ -4,10 +4,8 @@
 
 "use strict"
 
-chrome.runtime.onInstalled.addListener(() => {
-  chrome.storage.sync.set({ editor: "vscode", localFolder: "" }, () => {
-    console.log("setting default editor to vscode")
-  })
-
-  chrome.runtime.openOptionsPage()
+chrome.runtime.onInstalled.addListener(details => {
+  if (details.reason === "install" || details.reason === "update") {
+    chrome.runtime.openOptionsPage()
+  }
 })
