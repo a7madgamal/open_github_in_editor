@@ -10,7 +10,7 @@ https://chrome.google.com/webstore/detail/open-github-in-editor/epklehdbjbicoeee
 
 https://addons.mozilla.org/en-US/firefox/addon/open-github-in-editor/
 
-- Supports vscode, vscode-isiders and textmate.
+- Supports vscode, vscode-insiders and textmate.
 - More editors soon, maybe also support for gitlab who knows!!
 
 ## want support for sublime text?
@@ -18,6 +18,11 @@ https://addons.mozilla.org/en-US/firefox/addon/open-github-in-editor/
 follow this blocking issue https://github.com/SublimeTextIssues/Core/issues/2514
 
 # Changelog
+
+## v1.1.0
+
+- conversation tab lines support
+- new icons
 
 ## v1.0.0
 
