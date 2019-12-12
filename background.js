@@ -5,6 +5,9 @@
 "use strict"
 
 chrome.runtime.onInstalled.addListener(details => {
+  // {"previousVersion":"0.2.0","reason":"update"}
+  // {"reason":"install"}
+  // "install", "update", "chrome_update", or "shared_module_update"
   if (details.reason === "install" || details.reason === "update") {
     chrome.runtime.openOptionsPage()
   }

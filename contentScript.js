@@ -1,6 +1,6 @@
 ;(() => {
   const settingsLoaded = (editor, localFolder) => {
-    let repoName = location.pathname.split("/")[2]
+    let repoName = location.pathname.split('/')[2]
 
     const openEditor = (
       editor,
@@ -13,56 +13,69 @@
       let url
 
       switch (editor) {
-        case "vscode":
-        case "vscode-insiders":
+        case 'vscode':
+        case 'vscode-insiders':
           url = `${editor}://file${fullPath}${
-            lineNumber ? `:${lineNumber}` : ""
+            lineNumber ? `:${lineNumber}` : ''
           }`
           break
 
-        case "txmt":
+        case 'txmt':
           url = `${editor}://open/?url=file://${fullPath}${
-            lineNumber ? `&line=${lineNumber}` : ""
+            lineNumber ? `&line=${lineNumber}` : ''
           }`
         default:
           break
       }
 
-      window.open(url, "_self")
+      window.open(url, '_self')
     }
 
     const handleLineClick = target => {
       const lineData = target.dataset
-      const fileData = target
-        .closest(".js-details-container")
-        .querySelector("[data-path]").dataset
+      let path
 
-      openEditor(
-        editor,
-        localFolder,
-        repoName,
-        fileData.path,
-        lineData.lineNumber
-      )
+      const closestDetail = target.closest('.js-details-container')
+      const closestComment = target.closest('.js-comment-container')
+
+      if (closestDetail) {
+        const dataPath = closestDetail.querySelector('[data-path]')
+        if (dataPath) {
+          path = dataPath.dataset.path
+        } else {
+          throw new Error('cant find dataPath')
+        }
+      } else if (closestComment) {
+        const fileInfo = closestComment.querySelector('.file-header a')
+        if (fileInfo) {
+          path = fileInfo.title
+        } else {
+          throw new Error('cant find fileInfo')
+        }
+      } else {
+        throw new Error('cant find file info')
+      }
+
+      openEditor(editor, localFolder, repoName, path, lineData.lineNumber)
     }
 
     const clickListener = e => {
       const target = e.target
 
-      if (target.classList.contains("js-linkable-line-number")) {
+      if (target.classList.contains('js-linkable-line-number')) {
         handleLineClick(target)
       } else if (
-        target.nodeName === "A" &&
-        target.closest(".js-file-header") !== null
+        target.nodeName === 'A' &&
+        target.closest('.js-file-header') !== null
       ) {
         openEditor(editor, localFolder, repoName, target.title)
       } else return
     }
 
-    document.addEventListener("click", clickListener)
+    document.addEventListener('click', clickListener)
   }
 
-  chrome.storage.sync.get(["editor", "localFolder"], function({
+  chrome.storage.sync.get(['editor', 'localFolder'], function({
     editor,
     localFolder
   }) {
