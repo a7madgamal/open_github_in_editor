@@ -1,0 +1,23 @@
+{
+  "name": "open_github_in_editor",
+  "version": "1.1.1",
+  "description": "Chrome and Firefox extension to open code from github in editors like vscode (diff lines)",
+  "scripts": {
+    "build": "zip dist/DIST.zip background.js contentScript.js icons/* manifest.json options.html options.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a7madgamal/open_github_in_editor.git"
+  },
+  "keywords": [
+    "github",
+    "vscode",
+    "productivity"
+  ],
+  "author": "Ahmed Hassanein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/a7madgamal/open_github_in_editor/issues"
+  },
+  "homepage": "https://github.com/a7madgamal/open_github_in_editor#readme"
+}

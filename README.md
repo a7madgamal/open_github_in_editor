@@ -19,6 +19,10 @@ follow this blocking issue https://github.com/SublimeTextIssues/Core/issues/2514
 
 # Changelog
 
+## v1.1.1
+
+- fix for conversation tab support
+
 ## v1.1.0
 
 - conversation tab lines support
