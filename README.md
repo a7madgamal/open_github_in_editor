@@ -1,8 +1,6 @@
 # Open Github in editor
 
-## v1.0.0
-
-A chrome and Firefox extension for opening a github diff line in your editor 💻
+A chrome and Firefox extension for opening github diff line in your editor 💻
 
 ![](record.gif)
 
