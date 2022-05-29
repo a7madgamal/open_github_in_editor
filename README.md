@@ -17,6 +17,11 @@ follow this blocking issue https://github.com/SublimeTextIssues/Core/issues/2514
 
 # Changelog
 
+## v1.2.0
+
+- Add support for Bitbucket
+- Show error message in page in case of errors
+
 ## v1.1.1
 
 - fix for conversation tab support

@@ -1,7 +1,7 @@
 {
-  "name": "Open Github in editor",
-  "version": "1.1.1",
-  "description": "Opens github PR diff lines and files locally in your editor. Supports vscode, vscode-insiders and textmate. more to come!",
+  "name": "Open Github/Bitbucket in editor",
+  "version": "1.2.0",
+  "description": "Opens Github or Bitbucket diff lines locally in your editor. Supports vscode, vscode-insiders and textmate. more to come!",
   "manifest_version": 2,
   "permissions": ["storage"],
   "options_ui": {
@@ -9,7 +9,11 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://github.com/*"],
+      "matches": [
+        "https://github.com/*",
+        "https://bitbucket.com/*",
+        "https://bitbucket.curalie.com/*"
+      ],
       "run_at": "document_idle",
       "js": ["contentScript.js"]
     }
