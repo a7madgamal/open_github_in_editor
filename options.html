@@ -14,16 +14,23 @@
     <br />
     <br />
     <label for="localFolder">
-      Absolute path for the local repos folder (folder name should match repo
-      name!) and with a trailing slash
+      Absolute path for the local repos folder like /Users/username/work/
+      <ul>
+        <li>
+          Should be a folder that contains your repos in folders matching the
+          repo name
+        </li>
+        <li>Repo folder names should match repo name on remote</li>
+        <li>Use full path without the ~ character</li>
+        <li>Add a trailing slash</li>
+      </ul>
     </label>
-    <br />
-    <br />
+
     <input
       type="text"
       id="localFolder"
       style="min-width: 400px"
-      placeholder="/absolute/path/of/your/repos/parent/folder/"
+      placeholder="/Users/username/work/"
     />
 
     <div id="status"></div>
@@ -33,9 +40,10 @@
 
     <br />
 
-    <h3>whats new??</h3>
+    <h3>Whats new 🎉</h3>
     <ul>
-      <li>- fix for conversation tab support</li>
+      <li>Fix support for Bitbucket</li>
+      <li>Update to chrome manifest v3</li>
     </ul>
     <script src="options.js"></script>
   </body>

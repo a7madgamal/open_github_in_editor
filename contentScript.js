@@ -142,18 +142,27 @@ const githubClickListener = (e, editor, localFolder) => {
 }
 
 const bitbucketClickListener = (e, editor, localFolder) => {
-  const repoName = location.pathname.split('/')[4]
+  const repoName = location.pathname.split('/')[2]
   const target = e.target
 
-  if (target.classList.contains('diff-line-number')) {
+  if (target.classList.contains('line-number-permalink')) {
     const lineNumber = parseInt(target.innerText)
     let fileRelativePath
 
     if (target.href) {
       try {
-        fileRelativePath = target.href.split('#')[1].split('?')[0]
+        fileRelativePath = target.href
+          .split('#')[1]
+          .replace('chg_', '')
+          .replace('_newline', '___$EP___')
+          .replace('_oldline', '___$EP___')
+          .split('___$EP___')[0]
       } catch (error) {
-        reportError('Bitbucket: diff-line-number parse failed')
+        reportError('Bitbucket: line-number-permalink parse failed')
+      }
+
+      if (!fileRelativePath) {
+        reportError('Bitbucket: failed to get file path')
       }
     } else if (target.closest('.file-comment')) {
       try {

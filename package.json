@@ -1,6 +1,6 @@
 {
   "name": "open_github_in_editor",
-  "version": "1.1.1",
+  "version": "1.2.1",
   "description": "Chrome and Firefox extension to open code from github in editors like vscode (diff lines)",
   "scripts": {
     "build": "zip dist/DIST.zip background.js contentScript.js icons/* manifest.json options.html options.js"

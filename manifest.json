@@ -1,8 +1,8 @@
 {
   "name": "Open Github/Bitbucket in editor",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Opens Github or Bitbucket diff lines locally in your editor. Supports vscode, vscode-insiders and textmate. more to come!",
-  "manifest_version": 2,
+  "manifest_version": 3,
   "permissions": ["storage"],
   "options_ui": {
     "page": "options.html"
@@ -12,15 +12,14 @@
       "matches": [
         "https://github.com/*",
         "https://bitbucket.com/*",
-        "https://bitbucket.curalie.com/*"
+        "https://bitbucket.org/*"
       ],
       "run_at": "document_idle",
       "js": ["contentScript.js"]
     }
   ],
   "background": {
-    "scripts": ["background.js"],
-    "persistent": false
+    "service_worker": "background.js"
   },
   "icons": {
     "32": "icons/32.png",

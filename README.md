@@ -17,6 +17,11 @@ follow this blocking issue https://github.com/SublimeTextIssues/Core/issues/2514
 
 # Changelog
 
+## v1.2.1
+
+- Fix support for Bitbucket</li>
+- Update to chrome manifest v3</li>
+
 ## v1.2.0
 
 - Add support for Bitbucket
