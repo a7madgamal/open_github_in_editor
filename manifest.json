@@ -1,6 +1,6 @@
 {
   "name": "Open Github/Bitbucket in editor",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "Opens Github or Bitbucket diff lines locally in your editor. Supports vscode, vscode-insiders and textmate. more to come!",
   "manifest_version": 3,
   "permissions": ["storage"],
